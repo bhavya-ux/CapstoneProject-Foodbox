@@ -1,0 +1,21 @@
+<table border>
+    <thead>
+     <th>Order ID</th>
+     <th>Payment Method</th>
+     <th>Menu Item Name</th>
+     <th>Menu Item Price</th>
+     <th>Customer Name</th>
+     <th>Customer Address</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of orderIdresponse">
+            <td>{{i.orderId}}</td>
+            <td>{{i.orderPaymentMethod}}</td>
+            <td>{{i.menu.menuItemName}}</td>
+            <td>{{i.menu.menuItemPrice}}</td>
+            <td>{{i.user.userName}}</td>
+            <td>{{i.user.userAddress}}</td>
+        </tr>
+    </tbody>
+</table>
+

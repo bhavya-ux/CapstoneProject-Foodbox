@@ -1,0 +1,16 @@
+<table border="1px" >
+    <thead>
+        <th>Restaurant Id</th>
+        <th>Restaurant Name</th>
+        <th>Restaurant Location</th>
+        <th>Restaurant Cuisine</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of restaurantlist">
+            <td>{{i.restaurantId}}</td>
+            <td>{{i.restaurantName}}</td>
+            <td>{{i.restaurantLocation}}</td>
+            <td>{{i.restaurantCuisine}}</td>
+        </tr>
+    </tbody>
+</table>

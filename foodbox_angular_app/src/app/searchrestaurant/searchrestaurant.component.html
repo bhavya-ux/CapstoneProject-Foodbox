@@ -1,0 +1,28 @@
+<ng-container *ngIf="!locationresponse">
+    <div>
+        <h3 style="text-decoration: underline;">Search for a restaurant by location</h3>
+        <table border="1px">
+            <tr>
+                <td><input type="text" [(ngModel)]="restaurantLocation" placeholder="Enter location"></td>
+            </tr>
+        </table>
+        <button (click)="searchrestaurantbylocation()">Search!</button>
+    </div>
+</ng-container>
+
+<table border="1px" *ngIf = "locationresponse">
+    <thead>
+        <th>Restaurant Id</th>
+        <th>Restaurant Name</th>
+        <th>Restaurant Location</th>
+        <th>Restaurant Cuisine</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of locationresponse">
+            <td>{{i.restaurantId}}</td>
+            <td>{{i.restaurantName}}</td>
+            <td>{{i.restaurantLocation}}</td>
+            <td>{{i.restaurantCuisine}}</td>
+        </tr>
+    </tbody>
+</table>

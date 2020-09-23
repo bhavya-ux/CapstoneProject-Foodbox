@@ -1,0 +1,65 @@
+<div class = "container">
+  <div class="heading" align = "center">
+    <h3>Welcome to {{title}}</h3>
+    </div>
+   <div *ngIf = "message == 'Login successful'">
+      <ul>
+       <!-- <li><a routerLink="/productlist">All products</a></li>
+       <li><a routerLink="/productById">Search Product By Id</a></li>
+       <li><a routerLink="/userlist">All Users list</a></li>
+       <li><a routerLink="/addproduct">Add Product</a></li>
+       <li><a routerLink="/userById">Search User By Id</a></li>
+       <li><a routerLink="/adduser">Add User</a></li>
+       <li><a routerLink="/adminlist">All Admins</a></li>
+       <li><a routerLink ="/addadmin">Add Admin</a></li> -->
+       <li><a align = "centre" routerLink ="/restaurantlist">All Restaurants List</a></li>
+       <li><a align = "centre"routerLink ="/searchrestaurant">Search Restaurant</a></li>
+       <li><a align = "centre"routerLink ="/addrestaurant">Add Restaurant</a></li>
+       <li><a align = "centre"routerLink ="/searchmenu">Search by Dish</a></li>
+       <li><a align = "centre"routerLink ="/searchorder">View Orders</a></li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <div align="center">
+      <router-outlet></router-outlet>
+    </div>
+    <ng-container *ngIf= "message != 'Login successful'">
+      <ng-container *ngIf ="loginflag">
+        <div align = "center">
+            <h3 style="text-decoration: underline;">Please login to continue</h3>
+            <table border="1px">
+                <tr>
+                    <td><input type="text" [(ngModel)]="username" placeholder="Enter Username"></td>
+                </tr>
+                <tr>
+                    <td><input type="password" [(ngModel)]="password" placeholder="Enter Password"></td>
+                </tr>
+            </table>
+            <button (click)="login()">Login!</button>
+        </div>
+      </ng-container>
+      
+      <ng-container *ngIf= "registerflag">
+        <div align="center">
+          <h3 style="text-decoration: underline;">Register as User</h3>
+          <table border="1px">
+              <tr>
+                  <td><input type="number" [(ngModel)]="details.loginId" placeholder="Enter Login ID"></td>
+              </tr>
+              <tr>
+                  <td><input type="text" [(ngModel)]="details.userName" placeholder="Enter User Name"></td>
+              </tr>
+              <tr>
+                  <td><input type="password" [(ngModel)]="details.userPassword" placeholder="Enter User Password"></td>
+              </tr>
+          </table>
+          <button (click)="register()">Create</button>
+      </div>
+      </ng-container>
+      </ng-container>
+      
+      <div align="center" *ngIf = "message == 'Login successful'">
+        <router-outlet></router-outlet>
+      </div>
+</div>

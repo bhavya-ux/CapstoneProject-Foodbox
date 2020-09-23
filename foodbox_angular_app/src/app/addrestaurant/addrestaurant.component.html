@@ -1,0 +1,19 @@
+<div>
+    <h3 style="text-decoration: underline;">Add Restaurant</h3>
+    <table border="1px">
+        <tr>
+            <td><input type="number" [(ngModel)]="restaurant.restaurantId" placeholder="Restaurant ID"></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="restaurant.restaurantName" placeholder="Restaurant Name"></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="restaurant.restaurantLocation" placeholder="Restaurant Location"></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="restaurant.restaurantCuisine" placeholder="Restaurant Cuisine"></td>
+        </tr>
+        <button (click)="addrestaurant()">Add</button>
+    </table>
+    </div>
+   

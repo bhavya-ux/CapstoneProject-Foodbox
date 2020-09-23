@@ -1,0 +1,57 @@
+<!-- <ng-container *ngIf="!menuItemresponse">
+    <div>
+        <h3 style="text-decoration: underline;">Search by a dish</h3>
+        <table border="1px">
+            <tr>
+                <td><input type="text" [(ngModel)]="menuItemName" placeholder="Enter a Dish"></td>
+            </tr>
+        </table>
+        <button (click)="searchrestaurantbylocation()">Search!</button>
+    </div>
+</ng-container>
+
+<table border="1px" *ngIf = "menuItemresponse">
+    <thead>
+        <th>Restaurant Id</th>
+        <th>Restaurant Name</th>
+        <th>Restaurant Location</th>
+        <th>Restaurant Cuisine</th> 
+        <th>Menu ID</th> 
+        <th>Menu Item Name</th>
+        <th>Menu Item Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of menuItemresponse">
+            <td>{{i.restaurant.restaurantId}}</td>
+            <td>{{i.restaurant.restaurantName}}</td>
+            <td>{{i.restaurant.restaurantLocation}}</td>
+            <td>{{i.restaurant.restaurantCuisine}}</td>  -->
+            <!-- <td>{{i.menuItemId}}</td>
+            <td>{{i.menuItemName}}</td>
+            <td>{{i.menuItemPrice}}</td>
+        </tr>
+    </tbody>  -->
+
+    <table border="1px" >
+        <thead>
+            <th>Restaurant Id</th>
+            <th>Restaurant Name</th>
+            <th>Restaurant Location</th>
+            <th>Restaurant Cuisine</th>
+            <th>Menu ID</th> 
+            <th>Menu Item Name</th>
+            <th>Menu Item Price</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of menuItemresponse">
+                <td>{{i.restaurant.restaurantId}}</td>
+                <td>{{i.restaurant.restaurantName}}</td>
+                <td>{{i.restaurant.restaurantLocation}}</td>
+                <td>{{i.restaurant.restaurantCuisine}}</td>
+                <td>{{i.menuItemId}}</td>
+               <td>{{i.menuItemName}}</td>
+               <td>{{i.menuItemPrice}}</td>
+            </tr>
+        </tbody>
+    </table>
+
